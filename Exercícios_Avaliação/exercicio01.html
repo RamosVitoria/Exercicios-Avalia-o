@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Exercício 01</title>
+</head>
+<body>
+ Digite uma Palavra/Frase <input type="text" id="texto">
+</p>
+ Palavra Reverso: <input type="text" id="reverso">
+</p>
+ <button id="executar">Executar</button>
+</body>
+<script>
+   let btn = document.getElementById("executar")
+        btn.addEventListener("click", () =>{
+        var novoTexto=""
+        let texto = document.getElementById("texto").value;  
+        let tamanho = texto.length;
+        for( i= tamanho-1; i >=0; i--){  
+            console.log(texto[i])
+            var novoTexto = novoTexto+ texto[i];
+        }
+        document.getElementById("reverso").value=novoTexto
+        })
+</script>
+</html> 

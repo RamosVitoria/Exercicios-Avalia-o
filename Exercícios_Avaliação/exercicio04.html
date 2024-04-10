@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Exercício 04</title>
+</head>
+<body>
+ Digite número 01: <input type="text" id="n1" size="5">
+</p>
+ Digite número 02: <input type="text" id="n2" size="5">
+</p>
+ Digite número 03: <input type="text" id="n3" size="5">
+</p>
+<hr>
+ Maior número Digitado: <input type="text" id="maior">
+</p>
+ Soma do números: <input type="text" id="soma">
+</p>
+ Par ou Impar: <input type="text" id="par_impar">
+</p>
+<button id="executar">Executar</button>
+</body>
+<script>
+let btn = document.getElementById("executar")
+        btn.addEventListener("click", () =>{
+            // Obter os valores digitados
+            var num1 = parseFloat(document.getElementById("n1").value);
+            var num2 = parseFloat(document.getElementById("n2").value);
+            var num3 = parseFloat(document.getElementById("n3").value);
+            
+            // Encontrar o maior número
+            var maiorNumero = Math.max(num1, num2, num3);
+            
+            // Calcular a soma dos números
+            var soma = num1 + num2 + num3;
+            
+            // Verificar se a soma é par ou ímpar
+            var parOuImpar = soma % 2 === 0 ? "Par" : "Ímpar";
+            if(soma % 2 ==0){
+                
+            }
+            
+            // Exibir os resultados
+            document.getElementById("maior").value = maiorNumero;
+            document.getElementById("soma").value = soma;
+            document.getElementById("par_impar").value = parOuImpar;
+        });
+</script>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Exercício 02</title>
+</head>
+<body>
+ Digite um texto: <input type="text" id="texto" size="35" >
+ <br><br>
+ Vogais <input type="text" id="vogais" size="35">
+ <br><br>
+ Quantidade Vogais <input type="text" id="quantidade" size="5">
+ <br>
+ <br>
+ <button id="executar">Executar</button>
+</body>
+ <script>
+        let btn = document.getElementById("executar")
+        btn.addEventListener("click", () =>{
+            let texto = document.getElementById("texto").value;
+            let tamanho = texto.length
+            var vogais =""
+            for (let i = 1;i < tamanho; i ++){
+                if(["A","E","O","I","U"].indexOf(texto[i])> -1){
+                    vogais = vogais+texto[i]
+                }
+            }
+            document.getElementById("vogais").value=vogais
+            document.getElementById("quantidade").value=vogais.length
+        })
+ </script>
+</html> 
